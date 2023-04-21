@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script lang="javascript" src="https://cdn.sheetjs.com/xlsx-0.19.2/package/dist/xlsx.full.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link href="style/style.css" rel="stylesheet">
+    <link href="style/color.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de sites</title>
+</head>
+<body>
+    <header id="Header"><!--Header-->
+    <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Oitavo exemplo de barra de navegação">
+        <div class="container">
+          <a class="navbar-brand" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lucas Dev</font></font></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Alternar de navegação">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarsExample07">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+             
+              <li class="nav-item">
+                <a class="nav-link" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Gerador de Posts</font></font></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="geradorDeSites.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Gerador de Sites</font></font></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="modelo0.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">modelo1</font></font></a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Suspenso</font></font></a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ação</font></font></a></li>
+                  <li><a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">outra ação</font></font></a></li>
+                  <li><a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">outra coisa aqui</font></font></a></li>
+                </ul>
+              </li>
+            </ul>
+            <form role="search">
+              <input class="form-control" type="search" placeholder="Procurar" aria-label="Procurar">
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header><!--Header-->
+   
+    <div class="utils"><!--utils-->
+        <div class="container">
+            <div class="w100 title"><h1>Editor de sites</h1></div>
+            <div class="w100">
+                <div class="filtros">
+                    
+                        <ul>
+                            <li><!--Segmento-->
+                                <label>Id do modelo</label>
+                                <input class="form-control" type="number" id="idModeloSite" name="id" max="1" min="0" value="0"/>
+                            </li><!--Segmento-->
+                            <li><!--Segmento-->
+                                <label>Nome da empresa</label>
+                                <input class="form-control" type="number" id="nomeDaEmpresa" name="nome"/>
+                            </li><!--Segmento-->
+                            <li><!--Segmento-->
+                                <label>Sobre oque ela é?</label>
+                                <input class="form-control" type="number" id="segmento" name="segmento"/>
+                            </li><!--Segmento-->
+                            <li><!--Segmento-->
+                                <label>Envie sua logo</label>
+                                <input class="form-control" type="file" id="logoSite" name="logoSite"/>
+                            </li><!--Segmento-->
+
+                        </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </div><!--utils-->
+   
+    <section id="Post"><!--post-->
+        <div class="container"><!--center-->
+            <div id="Loading"></div>
+            <div class="w100">
+                
+                <div class="w50">
+                    <textarea class="form-control" id="yourCode"></textarea>
+                </div>
+                <div class="w50">
+                    <div id="siteContainer">
+                        
+                    </div>
+                    <!--<iframe id="yourSite"></iframe>!-->
+                </div>
+            </div>
+            <div class="w100 btn-wrapper">
+                <a class="btn" id="GerarModelo">Gerar Modelo</a>
+                <a class="btn" id="baixarSite">Baixar Site</a>
+            </div>
+        </div><!--center-->
+    </section><!--Post-->
+    <script src="js/SiteModels/models.js"></script>
+    <script src="js/SiteModels/EditorSite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+</body>
+</html>
